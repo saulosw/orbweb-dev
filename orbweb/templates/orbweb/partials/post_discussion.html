@@ -1,25 +1,21 @@
-<div class="disc-post-content">
-    <i class="fa-solid fa-fire-flame-simple"></i>
-    <div class="publi-div">
-        <div class="publi-header">
+<div class="disc-div">
+    <div class="disc-header">
+        {% if post.user.profile_pic %}
             <img src="{{ post.user.profile_pic.url }}" class="profile-pic">
-            <h2>{{ post.user.username }}</h2>
-            <h3>{{ post.post_date }}</h3>
-        </div>
-        <div class="publi-content">
-            <p>{{ post.post_content }}</p>
-        </div>
-        <div class="publi-footer">
-            <div class="publi-icons">
-                <span class="like-section">
-                    <i class="fa-solid fa-meteor"></i>
-                    <span class="like-count">{{ post.post_likes }}</span>
-                </span>
-                <span class="comment-section">
-                    <i class="fa-solid fa-comments"></i>
-                    <span class="comment-count">{{ post.post_comments }}</span>
-                </span>
-            </div>
+        {% endif %}
+        <h2>{{ post.user.username }}</h2>
+        <h3>{{ post.created_at }}</h3>
+    </div>
+    <div class="disc-content">
+        <p><h1>{{ post.title }}</h1></p>
+        <p>{{ post.content }}</p>
+    </div>
+    <div class="disc-footer">
+        <div class="disc-icons">
+            <span class="comment-section">
+                <i class="fa-solid fa-comments"></i>
+                <span class="comment-count">{{ post.comments }}</span>
+            </span>
         </div>
     </div>
 </div>

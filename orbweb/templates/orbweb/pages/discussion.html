@@ -2,5 +2,12 @@
 
 {% block discussion_content %}
     {% include "orbweb/partials/navbar.html" %}
-    {% include "orbweb/partials/post_discussion.html" %}
+    <div class="disc-post-content">
+        <i class="fa-solid fa-fire-flame-simple"></i>
+        {% for post in disc_posts %}
+            {% include "orbweb/partials/post_discussion.html" %}
+        {% empty %}
+            <p>No discussion posts available.</p>
+        {% endfor %}
+    </div>
 {% endblock discussion_content %}

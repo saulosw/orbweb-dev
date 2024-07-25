@@ -4,9 +4,10 @@
 {% include "orbweb/partials/navbar.html" %}
 <div class="publications-container">
     {% for post in posts %}
-        {% include "orbweb/partials/post_home.html" %}
+    {% include "orbweb/partials/post_home.html" %}
     {% endfor %}
 </div>
+{% include "orbweb/partials/button_post.html" %}
 {% include "orbweb/partials/levprofile.html" %}
 <div class="discussion-content">
     <div class="discussion-fire">
@@ -15,7 +16,11 @@
     </div>
     <div class="discussion-topics">
         <div class="discussion-post">
-            {% include "orbweb/partials/topics.html" %}
+            <h3>Desenvolvimento de jogos independentes</h3>
+            <p>Quais motores de jogo (Unity, Unreal Engine, Godot) vocês preferem e por quê? Quais são os maiores
+                desafios no
+                desenvolvimento de jogos independentes?
+            </p>
         </div>
     </div>
 </div>
