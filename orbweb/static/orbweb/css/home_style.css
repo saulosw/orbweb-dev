@@ -195,6 +195,7 @@ body {
 }
 
 .publi-header h2 {
+    color: #1f1f1f;
     margin: 0 10px;
     font-size: 16px;
     display: inline-block;
@@ -475,6 +476,7 @@ h2 {
 }
 
 .disc-header h2 {
+    color: #1f1f1f;
     margin: 0 10px;
     font-size: 16px;
     display: inline-block;

@@ -4,7 +4,7 @@
 {% include "orbweb/partials/navbar.html" %}
 <div class="publications-container">
     {% for post in posts %}
-    {% include "orbweb/partials/post_home.html" %}
+        {% include "orbweb/partials/post_home.html" %}
     {% endfor %}
 </div>
 {% include "orbweb/partials/button_post.html" %}
@@ -15,13 +15,12 @@
         <h2>Discussões do Dia</h2>
     </div>
     <div class="discussion-topics">
-        <div class="discussion-post">
-            <h3>Desenvolvimento de jogos independentes</h3>
-            <p>Quais motores de jogo (Unity, Unreal Engine, Godot) vocês preferem e por quê? Quais são os maiores
-                desafios no
-                desenvolvimento de jogos independentes?
-            </p>
-        </div>
+        {% for disc_post in disc_posts %}
+            <div class="discussion-post">
+                <h3>{{ disc_post.title }}</h3>
+                <p>{{ disc_post.content }}</p>
+            </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock home_content %}
