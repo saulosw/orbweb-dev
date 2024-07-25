@@ -1,0 +1,25 @@
+<div class="disc-post-content">
+    <i class="fa-solid fa-fire-flame-simple"></i>
+    <div class="publi-div">
+        <div class="publi-header">
+            <img src="{{ post.user.profile_pic.url }}" class="profile-pic">
+            <h2>{{ post.user.username }}</h2>
+            <h3>{{ post.post_date }}</h3>
+        </div>
+        <div class="publi-content">
+            <p>{{ post.post_content }}</p>
+        </div>
+        <div class="publi-footer">
+            <div class="publi-icons">
+                <span class="like-section">
+                    <i class="fa-solid fa-meteor"></i>
+                    <span class="like-count">{{ post.post_likes }}</span>
+                </span>
+                <span class="comment-section">
+                    <i class="fa-solid fa-comments"></i>
+                    <span class="comment-count">{{ post.post_comments }}</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

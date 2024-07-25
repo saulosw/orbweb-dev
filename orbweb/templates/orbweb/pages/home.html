@@ -1,0 +1,22 @@
+{% extends "orbweb/partials/header.html" %}
+
+{% block home_content %}
+{% include "orbweb/partials/navbar.html" %}
+<div class="publications-container">
+    {% for post in posts %}
+        {% include "orbweb/partials/post_home.html" %}
+    {% endfor %}
+</div>
+{% include "orbweb/partials/levprofile.html" %}
+<div class="discussion-content">
+    <div class="discussion-fire">
+        <i class="fa-solid fa-fire-flame-curved"></i>
+        <h2>Discussões do Dia</h2>
+    </div>
+    <div class="discussion-topics">
+        <div class="discussion-post">
+            {% include "orbweb/partials/topics.html" %}
+        </div>
+    </div>
+</div>
+{% endblock home_content %}
