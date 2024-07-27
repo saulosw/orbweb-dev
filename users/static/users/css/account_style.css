@@ -1,0 +1,24 @@
+:root {
+    --white_color: #f0f0f0;
+    --box_color: #e9e9e9;
+    --box_shadow: rgb(206, 206, 206);
+    --like_color: rgb(255, 147, 147);
+    --comment_color: rgb(169, 169, 255);
+    --like_color_hover: rgb(199, 111, 111);
+    --comment_color_hover: rgb(133, 133, 201);
+    --discussion_color: orange;
+}
+
+body {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    background-color: var(--white_color);
+    margin: 0;
+    padding: 0;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
