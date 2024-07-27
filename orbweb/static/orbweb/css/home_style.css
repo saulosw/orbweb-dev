@@ -16,6 +16,55 @@ body {
     padding: 0;
 }
 
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+body.dark-mode .publi-div {
+    background-color: #333;
+    box-shadow: -5px 5px 10px rgb(80, 80, 80);
+}
+
+body.dark-mode .lev-profile, 
+body.dark-mode .disc-div, 
+body.dark-mode .discussion-container {
+    background-color: #333;
+    box-shadow: -5px 5px 10px rgb(80, 80, 80);
+}
+
+body.dark-mode .discussion-content {
+    background-color: #1a1a1a;
+    border-color: #333;
+    box-shadow: -5px 5px 10px rgb(80, 80, 80);
+}
+
+body.dark-mode .discussion-post {
+    background-color: #292929;
+    border-color: #444444;
+}
+
+body.dark-mode .comment-count,
+body.dark-mode .like-count,
+body.dark-mode .disc-header h2,
+body.dark-mode .publi-header h2,
+body.dark-mode .discussion-post h3,
+body.dark-mode .discussion-post p {
+    color: rgb(252, 252, 252);
+}
+
+body.dark-mode .discussion-fire {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode .button-post-content {
+    background-color: #555;
+}
+
+body.dark-mode .button-post-content:hover {
+    background-color: #333;
+}
+
 .underline i {
     font-size: 30px;
 }
@@ -150,7 +199,14 @@ body {
 }
 
 .fa-circle-half-stroke {
-    font-size: 34px;
+    font-size: 50px;
+    color: white;
+    transition: all 300ms ease-in-out;
+}
+
+.fa-circle-half-stroke:hover {
+    color: rgb(201, 201, 201);
+    transition: all 300ms ease-in-out;
 }
 
 .publications-container {
@@ -381,11 +437,13 @@ h2 {
 }
 
 .discussion-post h3 {
+    color: black;
     margin: 0 0 10px;
     font-size: 18px;
 }
 
 .discussion-post p {
+    color: black;
     margin: 0;
     font-size: 14px;
 }
