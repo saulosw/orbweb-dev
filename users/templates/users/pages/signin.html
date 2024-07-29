@@ -1,5 +1,28 @@
 {% extends "users/partials/header.html" %}
 
 {% block signin %}
-    <h1> Olá WOW! </h1>
-{% endblock signin %}
+
+<div class="signin-container">
+    <h1 class="welcome-msg">Boas vindas ao OrbT! :)</h1>
+    <h2 class="suggest-msg">Participe de discussões, compartilhe conhecimentos e fique por dentro das novidades tecnológicas!</h2>
+    <form action="{% url "user:create" %}" method="POST">
+        {% csrf_token %}
+        <div class="form-content form-content-grid">
+            {% for field in forms %}
+            <div class="form-group">
+                <label for="{{ field.id_for_label }}"> {{ field.label }}</label>
+                {{ field }}
+                {% if field.help_text %}
+                    <p class="help-text"> {{ field.help_text }}</p>
+                {% endif %}
+                {{ field.errors }}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="div-account-btx">
+            <button type="submit" class="create-account-btx">Criar conta</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
