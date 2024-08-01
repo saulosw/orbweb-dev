@@ -5,16 +5,16 @@
 <div class="signin-container">
     <h1 class="welcome-msg">Boas vindas ao OrbT! :)</h1>
     <h2 class="suggest-msg">Participe de discussões, compartilhe conhecimentos e fique por dentro das novidades tecnológicas!</h2>
-    <form action="{% url "user:create" %}" method="POST">
+    <form action="{% url "user:create" %}" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="form-content form-content-grid">
-            {% for field in forms %}
+            {% for field in form %}
             <div class="form-group">
-                <label for="{{ field.id_for_label }}"> {{ field.label }}</label>
+                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
                 {{ field }}
-                
+
                 {% if field.help_text %}
-                    <p class="help-text"> {{ field.help_text }}</p>
+                    <p class="help-text">{{ field.help_text }}</p>
                 {% endif %}
 
                 {{ field.errors }}
@@ -24,9 +24,9 @@
 
         {% if form.errors %}
         <div class="form-content form-content-grid">
-            <div class="forma-group">
+            <div class="form-group">
                 <div class="message message-error">
-                    Algo esta incorreto, corrija e tente novamente.
+                    Algo está incorreto, corrija e tente novamente.
                 </div>
             </div>
         </div>
