@@ -52,7 +52,7 @@ body {
 }
 
 .signin-container {
-    height: 50rem;
+    height: 57rem;
     width: 30%;
     position: absolute;
     top: 50%;
@@ -66,13 +66,17 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .welcome-msg {
     text-align: center;
     font-size: 40px;
     color: var(--black_color);
-    margin-top: -140px;
+    margin-top: 10px;
+    max-width: 100%;
+    word-wrap: break-word;
 }
 
 .suggest-msg {
@@ -81,32 +85,57 @@ body {
     color: var(--black_color);
     margin: 0;
     margin-bottom: 20px;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.form-group {
+    color: var(--black_color);
+    margin-top: 0;
+}
+
+.form-content label,
+.form-content .help-text,
+.errorlist {
+    display: block;
+    margin: 0.4rem 0;
+    font: 1.4rem;
+    list-style-type: none;
+}
+
+.form-content input {
+    width: 90%;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    border:1px solid var(--black_color)
+}
+
+.errorlist {
+    color: red;
 }
 
 .div-account-btx {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 40px;
-    padding: 20px;
+    margin-top: 10px;
+    padding: 0;
 }
 
 .create-account-btx {
     background-color: #191b22;
     color: var(--white_color);
     border: none;
-    padding: 15px 30px;
+    padding: 10px 30px;
     font-size: 30px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    max-width: 100%;
+    word-wrap: break-word;
 }
 
 .create-account-btx:hover {
-    background-color: rgb(37, 37, 37);
-}
-
-.form-group {
+    background-color: rgb(238, 238, 238);
     color: var(--black_color);
-    margin-top: 10px;
 }
