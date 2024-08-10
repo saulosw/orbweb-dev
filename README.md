@@ -27,9 +27,9 @@ This project is being developed with the following technologies:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/orbt.git
+   git clone https://github.com/saulosw/orbweb-dev.git
 
-   cd orbt
+   cd orbweb-dev
 
    python manage.py runserver
 
